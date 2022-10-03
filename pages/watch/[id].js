@@ -31,15 +31,30 @@ const Watch = () => {
             onOpen={() => setOpen(true)}
             onClose={() => setOpen(false)}
           >
-            <Button onClick={() => setOpen(false)} className="btn_sm">
-              Close
-            </Button>
+            <div
+              style={{
+                width: "80%",
+                margin: "0 auto",
+                marginTop: "15px",
+              }}
+            >
+              <Button onClick={() => setOpen(false)} className="btn_sm">
+                Close
+              </Button>
+            </div>
             <Comments className="gone" key={id} _id={id} />
           </SwipeableDrawer>
         )}
-        <Button onClick={() => setOpen(true)} className="btn_sm">
-          Comments
-        </Button>
+        <div
+          style={{
+            width: "80%",
+            margin: "0 auto",
+          }}
+        >
+          <Button onClick={() => setOpen(true)} className="btn_sm">
+            Comments
+          </Button>
+        </div>
       </div>
       <div className="recomended">
         <Recomen _id={id} />
